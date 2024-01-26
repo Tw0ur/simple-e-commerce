@@ -59,7 +59,7 @@ const Shopping: FC<IShop> = (props) => {
   console.log(product);
   
   return (
-    <div className="h-full w-full">
+    <>
       {product.length !== 0 ?( <>{product.map((e) => (
         <ShoppingCard
           key={e.id}
@@ -70,10 +70,10 @@ const Shopping: FC<IShop> = (props) => {
       ))}
       <div className="text-center p-4">Total: ${calculateTotal(product)}</div></> )
       :
-      (<div className="flex justify-center items-center h-full w-full">В корзине пусто</div>)
+      (<div className="flex justify-center items-center h-full w-full py-20">В корзине пусто</div>)
       }
       
-    </div>
+    </>
   );
 };
 
